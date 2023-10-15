@@ -22,7 +22,7 @@ print("\033[1m" + "Task B:" + "\033[0m")
 
 for month in (1, 3, 6, 12):
     price = price_day * month * 30
-    message = "Price for {} month(s) is {}$"
+    message = "Price for {} month(s) is ${}"
     print(message.format(month, round(price, 2)))
 print()
 
@@ -46,7 +46,7 @@ def cost_from_rate(rate):
     for item in items:
         price_item = cost_function(item["watt"], item["hours"], rate)
         name_item = item["item"]
-        message = "Price for {} each day {}$"
+        message = "Price for {} each day ${}"
         print(message.format(name_item, round(price_item, 2)))
 
 
