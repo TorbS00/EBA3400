@@ -49,3 +49,4 @@ for customer in customers:
     message = "Expected loss for customer {} is ${}"
     print(message.format(id, customer_loss))
 
+
