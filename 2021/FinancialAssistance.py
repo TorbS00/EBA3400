@@ -20,7 +20,7 @@ def convert_input(input_message):
     return int(user_input)
 
 
-print("\033[1mFinancial assistance calculator!\033[0m")
+print("Financial assistance calculator!")
 print()
 
 income = convert_input("What is your household income:")
