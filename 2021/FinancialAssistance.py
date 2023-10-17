@@ -12,30 +12,21 @@ def financial_assistance(income, children):
     return 0
 
 
-# Function for checking if the input is an integer (whole number)
-def input_integer_check(user_input):
-    try:
-        int(user_input)
-        return True
-    except ValueError:
-        return False
+# Function used to checking and returning user input as integer
+def convert_input(input_message):
+    while not(user_input:=input(input_message)).isdecimal():
+        print("Your input must be an integer...")
+    print()
+    return int(user_input)
 
 
-print("\033[1m" + "Financial assistance calculator!" + "\033[0m")
-input_income = input("Please enter your household income:")
-while not input_integer_check(input_income):
-    input_income = input("Your household needs to be an integer, try again:")
-int_input_income = int(input_income)
+print("\033[1mFinancial assistance calculator!\033[0m")
 print()
 
+income = convert_input("What is your household income:")
+children = convert_input("How many children do you have:")
+financial_support = financial_assistance(income, children)
 
-input_children = input("How many children do you have:")
-while not input_integer_check(input_children):
-    input_children = input("Your amount of children needs to be an integer, try again:")
-int_input_children = int(input_children)
-print()
+print(f"The financial support for a household with ${income} "
+      f"income and {children} children is ${financial_support}")
 
-
-financial_support = financial_assistance(int_input_income, int_input_children)
-message = "The financial support for a household with ${} income and {} children is ${}"
-print(message.format(input_income, input_children, financial_support))
