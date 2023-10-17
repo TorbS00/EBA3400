@@ -14,4 +14,4 @@ EBA3400 is an introductory course that covers Python programming, data extractio
 
 ## Repository Focus
 
-This repository provides solutions to past EBA3400 exams, shared from a fellow student's perspective. These solutions offer alternative problem-solving approaches, reflecting how I would tackle the challenge.
+This repository provides solutions to past EBA3400 exams, shared from a fellow student's perspective. These solutions offer alternative problem-solving approaches.
