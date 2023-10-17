@@ -14,14 +14,14 @@ def expected_loss(ead, pd, lgd):
     return percentage_converter(pd) * ead * (1 - percentage_converter(lgd))
 
 
-print("\033[1m" + "Task A:" + "\033[0m")
+print("Task A")
 print("Calculated expected loss for the company is: $" +
       str(round(expected_loss(1000000, 100, 55), 2)))
 print()
 
 # Task B)
 # Put the given table (customerID, Loan amount, PD, EAD, LGD) in the list
-print("\033[1m" + "Task B:" + "\033[0m")
+print("Task B")
 customers = [
     {"CustomerID": "A20001", "PD": 1, "EAD": 10000, "LGD": 10},
     {"CustomerID": "A20002", "PD": 2, "EAD": 20000, "LGD": 20},
@@ -38,7 +38,7 @@ print()
 #Task C)
 # Create  a  function  to  read  the  given  list  from  part  (b)
 # and  calculate  Expected  loss  for  each customerID and print the result
-print("\033[1m" + "Task C:" + "\033[0m")
+print("Task C")
 print("Expected loss for customers:")
 for customer in customers:
     id = customer["CustomerID"]
@@ -46,7 +46,6 @@ for customer in customers:
     ead = customer["EAD"]
     lgd = customer["LGD"]
     customer_loss = round(expected_loss(ead, pd, lgd), 2)
-    message = "Expected loss for customer {} is ${}"
-    print(message.format(id, customer_loss))
+    print(f"Expected loss for customer {id} is ${customer_loss}")
 
 

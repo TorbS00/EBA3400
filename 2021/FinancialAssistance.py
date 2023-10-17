@@ -1,20 +1,20 @@
 # Financial assistance
 # The function used to calculate financial support
-def financial_assistance(income, children):
-    if 30000 <= income <= 40000:
-        if children >= 3:
-            return 1000 * children
-    elif 20000 <= income <= 30000:
-        if children >= 2:
-            return 1500 * children
-    elif income < 20000:
-        return 2000 * children
+def financial_assistance(input_income, input_children):
+    if 30000 <= input_income <= 40000:
+        if input_children >= 3:
+            return 1000 * input_children
+    elif 20000 <= input_income <= 30000:
+        if input_children >= 2:
+            return 1500 * input_children
+    elif input_income < 20000:
+        return 2000 * input_children
     return 0
 
 
 # Function used to checking and returning user input as integer
 def convert_input(input_message):
-    while not(user_input:=input(input_message)).isdecimal():
+    while not(user_input := input(input_message)).isdecimal():
         print("Your input must be an integer...")
     print()
     return int(user_input)

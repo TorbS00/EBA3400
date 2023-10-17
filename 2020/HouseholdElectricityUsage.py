@@ -10,7 +10,7 @@ def cost_function(watt, hours, rate):
 
 
 price_day = cost_function(150, 5, 12)
-print("\033[1m" + "Task A:" + "\033[0m")
+print("Task A")
 
 print("Usage of TV for one day ($): " + str(price_day))
 print()
@@ -18,12 +18,11 @@ print()
 # Task B)
 # Use an iterative procedure (a loop) to determine the price
 # for 1, 3,6, 12 months. Use information about calculation from part (a)
-print("\033[1m" + "Task B:" + "\033[0m")
+print("Task B")
 
 for month in (1, 3, 6, 12):
-    price = price_day * month * 30
-    message = "Price for {} month(s) is ${}"
-    print(message.format(month, round(price, 2)))
+    price = round(price_day * month * 30, 2)
+    print(f"Price for {month} month(s) is ${price}")
 print()
 
 # Task C)
@@ -32,7 +31,7 @@ print()
 # watt using (5, 12,24) hours per day with a rate that you
 # get as an input(eg.,12 cents)?Use your function from
 # previous parts to answer the question.
-print("\033[1m" + "Task C:" + "\033[0m")
+print("Task C")
 
 
 def cost_from_rate(rate):
@@ -44,10 +43,9 @@ def cost_from_rate(rate):
     ]
 
     for item in items:
-        price_item = cost_function(item["watt"], item["hours"], rate)
+        price_item = round(cost_function(item["watt"], item["hours"], rate), 2)
         name_item = item["item"]
-        message = "Price for {} each day ${}"
-        print(message.format(name_item, round(price_item, 2)))
+        print(f"Price for {name_item} each day ${price_item}")
 
 
 cost_from_rate(12)
